@@ -13,7 +13,7 @@ public class Student extends Person{
     private Tutor tutor;
 
     @ManyToMany(mappedBy = "students")
-    private Set<Teacher> teachers = new  HashSet<Teacher>();
+    private Set<Teacher> teachers = new  HashSet<>();
 
     public Student(String firstName, String lastName) {
         super(firstName, lastName);
