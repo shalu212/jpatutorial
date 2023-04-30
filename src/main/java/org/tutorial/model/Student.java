@@ -1,8 +1,9 @@
 package org.tutorial.model;
 
 import javax.persistence.*;
-import java.util.HashSet;
-import java.util.Set;
+//import java.util.HashSet;
+//import java.util.Set;
+import java.util.*;
 
 @Entity
 @NamedQuery(name = "find student by id" ,query = "Select s from Student s where s.id = :id")
@@ -12,7 +13,7 @@ public class Student extends Person{
     private Tutor tutor;
 
     @ManyToMany(mappedBy = "students")
-    private Set<Teacher> teachers = new HashSet<>();
+    private Set<Teacher> teachers = new Set<>();
 
     public Student(String firstName, String lastName) {
         super(firstName, lastName);
