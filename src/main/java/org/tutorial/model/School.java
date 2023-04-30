@@ -14,7 +14,7 @@ public class School {
     private String city;
 
     @OneToMany(targetEntity = Student.class)
-    private Set<Student> students = new HashSet<>();
+    private Set<Student> students = new HashSet<Student>();
 
     public School(String name, String city) {
         this.name = name;
